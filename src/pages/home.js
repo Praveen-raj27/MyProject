@@ -1,7 +1,9 @@
-import React,{ useState, useContext } from 'react'
+import React,{ useState, useContext, useEffect } from 'react'
 import { connect } from "react-redux";
 import {actionGetUserList} from '../redux/action'
 import { UserDetailsContext } from '../context';
+import PureComponentInput from './pureComponent';
+
 
 const Home=(props)=> {
   class Node {
@@ -95,8 +97,7 @@ const Home=(props)=> {
   list.removeFrom(1)
   list.print()
   // list.insert(2,0);
-  // list.push(3);
-  console.log(list, "list");
+  // console.log(list, "list");
     const [userDetails, setUserDetails] = useState({});
     const user = useContext(UserDetailsContext);
     const handleChange=(event)=>{
@@ -115,6 +116,7 @@ const Home=(props)=> {
     <div>Password</div>
     <input type={'password'} name={'password'} onChange={e=>handleChange(e)}></input>
     <div> <button onClick={handleLogin}>login</button></div>
+    <PureComponentInput name={userDetails.userName}></PureComponentInput>
     </>
   )
   

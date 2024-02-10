@@ -1,8 +1,8 @@
-import React , {useContext} from 'react'
-import {connect} from 'react-redux'
-import { UserDetailsContext } from '../context';
+import React, { useContext } from 'react'
+import { connect } from 'react-redux'
+import { UserDetailsContext } from '../context'
 
-const Courses=(props)=> {
+const Courses = (props) => {
   const user = useContext(UserDetailsContext)
   return (
     <>
@@ -13,11 +13,10 @@ const Courses=(props)=> {
   )
 }
 
-const mapStateToProps = state =>{
-    return {
-        getUserDetail : state.userDetails
-    }
+const mapStateToProps = state => {
+  return {
+    getUserDetail: state.userDetails
+  }
 }
-
-export default connect(mapStateToProps,null)(Courses)
+export default connect(mapStateToProps, null)(Courses)
 // export default Courses

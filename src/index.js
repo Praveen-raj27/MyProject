@@ -19,10 +19,10 @@ root.render(
   //   </BrowserRouter>
   // </Provider>
   <Provider store={store}>
-  <BrowserRouter>
-    <UserDetailsProvider>
-      <MyRoutes />
-    </UserDetailsProvider>
-  </BrowserRouter>
+    <BrowserRouter>
+      <UserDetailsProvider>
+        <MyRoutes />
+      </UserDetailsProvider>
+    </BrowserRouter>
   </Provider>
 );

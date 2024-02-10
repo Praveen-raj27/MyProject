@@ -6,7 +6,7 @@ const Courses = (props) => {
   const user = useContext(UserDetailsContext)
   return (
     <>
-      <div>Coursess</div>
+      <div>Courses</div>
       <>{user?.userDetails?.userName}</>
       <div>{props.getUserDetail.userName}</div>
     </>

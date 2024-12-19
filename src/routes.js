@@ -1,34 +1,33 @@
-import React from "react";
-
-import { Routes, Route, Link } from "react-router-dom";
-
+import React, { lazy } from "react";
+import { createBrowserRouter } from "react-router-dom";
+// const Layout = lazy(() => import("./pages/layout"));
+// const Home = lazy(() => import("./pages/home"));
+// const Contacts = lazy(() => import("./pages/contacts"));
+// const Cources = lazy(() => import("./pages/cources"));
+import Layout from "./pages/layout";
 import Home from "./pages/home";
 import Contacts from "./pages/contacts";
 import Cources from "./pages/cources";
 
-const MyRoutes = ({}) => {
-  return (
-    <>
-      <nav>
-        <ul>
-          <Link to="/" class="list">
-            Home
-          </Link>
-          <Link to="/course" class="list">
-            Course
-          </Link>
-          <Link to="/contact" class="list">
-            Contact
-          </Link>
-        </ul>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contacts />} />
-        <Route path="/course" element={<Cources />} />
-      </Routes>
-    </>
-  );
-};
+const routes = createBrowserRouter([
+  {
+    element: <Layout />,
+    path: "/",
+    children: [
+      {
+        element: <Home />,
+        path: "home",
+      },
+      {
+        element: <Contacts />,
+        path: "contact",
+      },
+      {
+        element: <Cources />,
+        path: "course",
+      },
+    ],
+  },
+]);
 
-export default MyRoutes;
+export default routes;

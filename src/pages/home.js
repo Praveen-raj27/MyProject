@@ -110,7 +110,7 @@ const Home = (props) => {
     window.history.pushState(userDetails, "", "/course");
   };
   return (
-    <>
+    <div className="home">
       <div>User Name</div>
       <input
         type={"text"}
@@ -128,7 +128,7 @@ const Home = (props) => {
         <button onClick={handleLogin}>login</button>
       </div>
       <PureComponentInput name={userDetails.userName}></PureComponentInput>
-    </>
+    </div>
   );
 };
 const mapDispatchToProps = (dispatch) => {

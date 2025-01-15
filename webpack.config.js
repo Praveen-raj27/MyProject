@@ -21,6 +21,10 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/, // This matches .css files
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   devServer: {
@@ -28,7 +32,9 @@ module.exports = {
     static: path.join(__dirname, "dist"), // Ensure contentBase points to 'dist'
     historyApiFallback: true, // This is the key fix
     hot: true, // Enable Hot Module Replacement (optional, for dev)
-    open: true, // Open the browser automatically when the server starts
+    open: {
+      target: "http://localhost:8000/login",
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({

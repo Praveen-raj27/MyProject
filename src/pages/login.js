@@ -12,7 +12,6 @@ const Login = (props) => {
     });
   };
   const handleOnChange = (e) => {
-    console.log(e, "e");
   };
   return (
     <>

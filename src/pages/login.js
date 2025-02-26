@@ -20,10 +20,6 @@ const Login = (props) => {
     console.log('close');
     
   }
-  const handleOpen=()=>{
-    console.log('open');
-    
-  }
   return (
     <>
       <div class="box">

@@ -16,6 +16,10 @@ const Login = (props) => {
   const handleOnChange = (e) => {
     console.log(e,'e')
   };
+  const handleClose=()=>{
+    console.log('close');
+    
+  }
   return (
     <>
       <div class="box">

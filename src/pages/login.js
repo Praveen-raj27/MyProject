@@ -10,6 +10,8 @@ const Login = (props) => {
     navigate({
       pathname: "/home",
     });
+    console.log('ad');
+    
   };
   const handleOnChange = (e) => {
   };

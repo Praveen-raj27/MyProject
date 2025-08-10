@@ -4,6 +4,7 @@ import { actionGetUserList } from "../redux/action";
 import { UserDetailsContext } from "../context";
 import PureComponentInput from "./pureComponent";
 import { Link, Outlet } from "react-router-dom";
+import ChatApp from "./chat";
 
 const Home = (props) => {
   class Node {
@@ -128,6 +129,7 @@ const Home = (props) => {
         <button onClick={handleLogin}>login</button>
       </div>
       <PureComponentInput name={userDetails.userName}></PureComponentInput>
+      <ChatApp></ChatApp>
     </div>
   );
 };
